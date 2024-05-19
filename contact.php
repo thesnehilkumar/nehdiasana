@@ -1,10 +1,6 @@
 <?php
 header('Content-Type: application/json');
 
-$servername = "mysql.selfmade.ninja";
-$username = "nehdiasana_83";
-$password = "LiveStreaming@09";
-$database = "nehdiasana_83_contact";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -16,10 +12,10 @@ if ($conn->connect_error) {
 
 function send_discord_notification()
 {
-    $webhook_url = "https://discord.com/api/webhooks/1212993665643974666/4kmhUPfn6E7xFUgfbriGmVjPsJqWBKvHcvpQGWAgw019m8DDgCEaLMjxdsw3tHiIsmx3";
+    $webhook_url = "";
     $data = array(
         "content" => "@everyone !! You have new client. 
-        Check it --> https://nehdia.zeal.lol/clients/"
+        Check it --> url"
     );
 
     $json_data = json_encode($data);
